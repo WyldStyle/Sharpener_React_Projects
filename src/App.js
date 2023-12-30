@@ -1,4 +1,5 @@
 import React from 'react';
+import NewExpense from './components/NewExpense/NewExpense'
 import Expenses from './components/Expenses/Expenses';
 
 export default function App(){
@@ -11,7 +12,10 @@ export default function App(){
   // );
 
   return (
+    <>
+    <NewExpense/>
     <SharpenerExp/>
+    </>
   );
 }
 
@@ -48,7 +52,6 @@ function ReturnExpenseArr(){
 function SharpenerExp() {
   const expenses = ReturnExpenseArr();
   console.log(expenses);
-  debugger
   return <LoopOnExpensesArr expenses={expenses}/>
 
 }

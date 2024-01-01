@@ -1,4 +1,4 @@
-.expense-date {
+/* .expense-date {
   display: flex;
   flex-direction: column;
   width: 5.5rem;
@@ -21,6 +21,33 @@
 }
 
 .expense-date__day {
+  font-size: 1.5rem;
+  font-weight: bold;
+} */
+.expense-date{
+  display: flex;
+  flex-direction: column;
+  width: 5.5rem;
+  height: 5.5rem;
+  border:1px solid white;
+  color: white;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  background-color: rgb(60, 2, 13);
+}
+.expense-date:hover{
+  box-shadow: 2px 2px 10px 4px white;
+}
+.expense-date__month{
+  font-weight: bold;
+}
+.expense-year{
+  font-size: 0.65rem;
+}
+.expense-date__day{
   font-size: 1.5rem;
   font-weight: bold;
 }

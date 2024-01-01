@@ -1,13 +1,13 @@
-.expense-item {
+/* .expense-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
   margin: 1rem 0;
   background-color: #4b4b4b;
-}
+} */
 
-.expense-item__description {
+/* .expense-item__description {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -51,4 +51,66 @@
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
+} */
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  /* border: 1px solid rgb(89,33,33); */
+  /* background-color: rgb(89, 9, 24); */
+  background-color: rgb(60, 2, 13);
+  border-radius: 12px;
+  padding: 0.5rem 2rem;
+}
+
+.expense-item__amount {
+  font-size: 1.5rem;
+  background-color: rgb(60, 0, 13);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+
+}
+
+.location {
+  border: 0.4px solid white;
+  border-radius: 7px;
+  padding: 0.5rem;
+}
+
+.divButton {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  /* background-color: rgb(65, 10, 15); */
+  /* background-color: black; */
+  margin-right: 1rem;
+  border: 1px solid rgb(89, 33, 33);
+}
+
+.button-edit,
+.button-delete {
+  margin: 1rem;
+  /* background-color: rgb(100, 9, 24); */
+  background-color: rgb(60, 2, 13);
+  /* background-color: black; */
+  border: 1px solid rgb(190, 109, 124);
+}
+
+button {
+  color: white;
+  font-size: 0.9rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+}
+
+button:hover {
+  /* box-shadow: 2px 2px 10px 4px white; */
+  box-shadow: 1px 3px 20px 10px #f72036;
+  background-color: rgb(80, 9, 24);
 }

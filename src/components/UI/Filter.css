@@ -1,0 +1,18 @@
+.divOuter{
+  background-color: rgb(0,0,61);
+  text-align: center;
+  font-size: 2rem;
+  width: 50rem;
+  max-width: 95%;
+  margin: 2rem auto;
+}
+.divBottom{
+  display: flex;
+  justify-content: space-evenly;
+}
+.divBars{
+  margin-top: 3rem;
+  background-color: pink;
+  height: 10rem;
+  width: 10px;
+}

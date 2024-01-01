@@ -1,8 +1,10 @@
 import React from 'react';
 import NewExpense from './components/NewExpense/NewExpense'
 import Expenses from './components/Expenses/Expenses';
+import Balance from './components/Balance/Balance';
+import { Filter } from './components/UI/Filter';
 
-export default function App(){
+export default function App() {
 
   // return React.createElement(
   //   'div',
@@ -13,14 +15,20 @@ export default function App(){
 
   return (
     <>
-    <NewExpense/>
-    <SharpenerExp/>
+      <div>
+        <Balance />
+      </div>
+      <div>
+        <Filter />
+      </div>
+      <NewExpense />
+      <SharpenerExp />
     </>
   );
 }
 
 
-function ReturnExpenseArr(){
+function ReturnExpenseArr() {
   const expenses = [
     {
       id: 'e1',
@@ -52,17 +60,17 @@ function ReturnExpenseArr(){
 function SharpenerExp() {
   const expenses = ReturnExpenseArr();
   console.log(expenses);
-  return <LoopOnExpensesArr expenses={expenses}/>
+  return <LoopOnExpensesArr expenses={expenses} />
 
 }
-function LoopOnExpensesArr({expenses}) {
+function LoopOnExpensesArr({ expenses }) {
   const expenseComponentArr = [];
   expenses.forEach(element => {
-    expenseComponentArr.push(<Expenses props={element}/>)
+    expenseComponentArr.push(<Expenses props={element} />)
   });
   // return <expenseComponentArr/>
   return expenseComponentArr
   // both are same
 }
 
-export {ReturnExpenseArr}
+export { ReturnExpenseArr }

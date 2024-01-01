@@ -1,4 +1,4 @@
-.new-expense__controls {
+/* .new-expense__controls {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -22,5 +22,35 @@
 }
 
 .new-expense__actions {
+  text-align: right;
+} */
+.button-addExpense{
+  background-color: #001710;
+}
+.button-addExpense:hover{
+  box-shadow: 2px 2px 8px 4px rgb(15, 208, 150);
+  background-color: rgb(2, 43, 39);
+}
+.new-expense__controls{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.new-expense__controls label{
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.new-expense__control input{
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: 1px solid aqua;
+  max-width: 100%;
+}
+.new-expense__actions{
   text-align: right;
 }

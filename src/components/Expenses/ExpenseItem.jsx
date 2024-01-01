@@ -10,7 +10,7 @@ const ExpenseItem = (props) => {
   // function clickHandler() {}
   const [category, setCategory] = useState(props.category);
   const [delButton, delExp] = useState(props)
-  const [amount,incAmt] = useState(props.amount);
+  const [amount, incAmt] = useState(props.amount);
 
 
   const clickHandler = () => {
@@ -20,22 +20,28 @@ const ExpenseItem = (props) => {
     const expense = ReturnExpenseArr();
     expense = expense.splice(idx, 1);
   }
-  function adding100(){
-    incAmt(amount+100);
+  function adding100() {
+    incAmt(amount + 100);
   }
 
   return (
     <Card className='expense-item'>
-      <ExpenseDate date={props.date} />
       <div className='expense-item__description'>
-        <h2>{props.location}</h2>
+        <ExpenseDate date={props.date} />
+        <h3 className='expense-item__description location'>{props.location}</h3>
+      </div>
+      <div className='expense-item__description category'>
         <h2>{category}</h2>
         <h3>{props.item}</h3>
-        <div className='expense-item__price'>${amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
-      <button onClick={delExpense}>Delete</button>
-      <button onClick={adding100}>Add 100</button>
+      <div className='expense-item__description'>
+        <div className='expense-item__amount'>Rs{amount}</div>
+      </div>
+      <div className='divButton'>
+
+        <button className='button-edit'>Edit</button>
+        <button onClick={delExpense} className='button-delete'>Delete</button>
+      </div>
     </Card>
   );
 }

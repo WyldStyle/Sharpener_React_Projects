@@ -1,4 +1,4 @@
-import "./Filter.css"
+import "./FilterBars.css"
 function Filter(){
   return (
     <div className="divOuter">FILTER BY YEAR
@@ -32,4 +32,4 @@ function Filter(){
     </div>
   )
 }
-export {Filter} 
+export {Filter}

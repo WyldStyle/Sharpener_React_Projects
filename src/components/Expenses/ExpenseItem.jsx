@@ -3,9 +3,8 @@ import React, { useState } from 'react';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
-import { ReturnExpenseArr } from '../../App';
 
-const ExpenseItem = (props) => {
+const ExpenseItem = ({props}) => {
   console.log('expenseItem', props);
   // function clickHandler() {}
   const [category, setCategory] = useState(props.category);
@@ -17,12 +16,11 @@ const ExpenseItem = (props) => {
     setCategory('Updated!');
   };
   const delExpense = (idx) => {
-    const expense = ReturnExpenseArr();
-    expense = expense.splice(idx, 1);
+    // expense = expense.splice(idx, 1);
   }
-  function adding100() {
-    incAmt(amount + 100);
-  }
+  // function adding100() {
+  //   incAmt(amount + 100);
+  // }
 
   return (
     <Card className='expense-item'>
@@ -30,6 +28,7 @@ const ExpenseItem = (props) => {
         <ExpenseDate date={props.date} />
         <h3 className='expense-item__description location'>{props.location}</h3>
       </div>
+      
       <div className='expense-item__description category'>
         <h2>{category}</h2>
         <h3>{props.item}</h3>
@@ -47,3 +46,4 @@ const ExpenseItem = (props) => {
 }
 
 export default ExpenseItem;
+// imported in ExpenseList
